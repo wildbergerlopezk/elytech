@@ -1,0 +1,127 @@
+/* ================================
+   ABOUT SECTION STYLES
+   ================================ */
+
+.about-section {
+    padding: var(--space-24) 0;
+    background: var(--surface);
+    position: relative;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: start;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.about-text p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.about-text strong {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+.about-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.metric {
+    padding: var(--space-6);
+    background: var(--surface-elevated);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.metric::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(0, 217, 255, 0.05) 100%);
+    transition: width var(--transition-base);
+}
+
+.metric:hover::before {
+    width: 100%;
+}
+
+.metric:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+    border-left-color: var(--secondary);
+    background: var(--background);
+}
+
+.metric h3 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    position: relative;
+    z-index: 1;
+}
+
+.metric p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* ================================
+   RESPONSIVE ABOUT
+   ================================ */
+
+@media (max-width: 1024px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: var(--space-20) 0;
+    }
+    
+    .about-metrics {
+        gap: var(--space-4);
+    }
+    
+    .metric {
+        padding: var(--space-5);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: var(--space-16) 0;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .metric h3 {
+        font-size: 1.125rem;
+    }
+}
