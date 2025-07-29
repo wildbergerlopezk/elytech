@@ -5,9 +5,9 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { name: "Instagram", icon: "instagram", url: "https://www.instagram.com/_elytech/" },
     { name: "Tik Tok", icon: "tiktok", url: "https://www.tiktok.com/@elytech_?_t=ZM-8yPpkNJKBfy&_r=1" },
-    { name: "Linkedin", icon: "linkedin", url: "https://www.linkedin.com" },
-    { name: "Whatsapp", icon: "whatsapp", url: "https://wa.me/" },
-    { name: "Github", icon: "github", url: "https://github.com" }
+    { name: "Linkedin", icon: "linkedin", url: "https://www.linkedin.com/posts/elytechsys_elytechsys-linkedin-activity-7355743741917163520-sMgc?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvem9oBthMNHimUthldOMHbZodyGinnK3M" },
+    { name: "Whatsapp", icon: "whatsapp", url: "https://wa.me/595974198790" },
+    { name: "Github", icon: "github", url: "https://github.com/elytechapi" }
   ];
 
   return (
